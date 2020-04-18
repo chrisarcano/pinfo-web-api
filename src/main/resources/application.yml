@@ -1,0 +1,43 @@
+
+spring:
+  profiles: prd
+
+---
+
+spring:
+  profiles: stg
+
+---
+
+spring:
+  profiles: dev
+
+---
+
+spring:
+  r2dbc:
+    url: r2dbc:mysql://localhost:3306/pinfo
+    username: ENC(iInpz+m43gPH8Cq9CzFMaA==)
+    password: ENC(lv3h/DFwDuJrNMEKCdmFzzCgDatVJUaM)
+  profiles: local
+
+---
+
+logging:
+  level:
+    reactor:
+      netty: info
+    io:
+      netty: info
+    org:
+      springframework:
+        data:
+          r2dbc: info
+springdoc:
+  swagger-ui:
+    path: /
+netty:
+  reactive:
+    wiretap:
+      enabled: false
+

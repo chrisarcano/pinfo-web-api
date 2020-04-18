@@ -1,0 +1,2 @@
+LOAD DATA INFILE '/tmp/table_pinfo_expense.csv' INTO TABLE pinfo.expense FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
+
